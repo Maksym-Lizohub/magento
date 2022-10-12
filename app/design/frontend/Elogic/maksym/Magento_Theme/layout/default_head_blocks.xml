@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+
+        <link rel="icon" type="image/png" sizes="32x32" src="Magento_Theme::favicon/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" src="Magento_Theme::favicon/favicon-16x16.png"/>
+
+    </head>
+</page>
