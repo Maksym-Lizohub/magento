@@ -55,7 +55,7 @@
             }
             .pagebuilder-slide-wrapper {
                 .lib-vendor-prefix-display(flex);
-                align-items: center;
+                .lib-vendor-box-align(center);
                 justify-content: flex-end;
             }
             .pagebuilder-overlay {
@@ -106,7 +106,7 @@
         }
         [data-element="wrapper"] {
             .lib-vendor-prefix-display(flex);
-            align-items: center;
+            .lib-vendor-box-align(center);
         }
         .pagebuilder-overlay {
             padding-left: 0;
@@ -139,7 +139,7 @@
             right: 0;
             &::before {
                 .lib-vendor-prefix-display(flex);
-                align-items: center;
+                .lib-vendor-box-align(center);
                 content: "|";
             }
         }
@@ -187,7 +187,7 @@
             }
             [data-element="content"] {
                 .lib-vendor-prefix-display(flex);
-                flex-direction: column;
+                .lib-vendor-prefix-flex-direction(column);
                 justify-content: center;
             }
             .pagebuilder-banner-wrapper .pagebuilder-banner-button {
@@ -210,8 +210,8 @@
     .section__brands {
         .row-full-width-inner {
             .lib-vendor-prefix-display(flex);
-            flex-direction: column;
-            align-items: center;
+            .lib-vendor-prefix-flex-direction(column);
+            .lib-vendor-box-align(center);
         }
         .brands__divider {
             width: 100%;
@@ -235,12 +235,13 @@
             }
             &__item {
                 .lib-vendor-prefix-display(flex);
-                flex-direction: column;
-                align-items: center;
+                .lib-vendor-box-align(center);
+                .lib-vendor-prefix-flex-direction(column);
             }
             &__image {
                 .lib-vendor-prefix-display(flex);
-                flex-direction: column;
+                .lib-vendor-prefix-flex-direction(column);
+
                 width: 110px;
                 [data-element="caption"] {
                     &:hover,
