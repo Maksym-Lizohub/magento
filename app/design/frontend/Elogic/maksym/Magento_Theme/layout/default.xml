@@ -14,5 +14,8 @@
         </referenceBlock>
 
         <referenceContainer name="title" remove="true"></referenceContainer>
+
+        <move element="post-header" destination="post-description" before="post-text-hld" />
+
     </body>
 </page>
