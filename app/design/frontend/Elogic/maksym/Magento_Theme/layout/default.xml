@@ -15,7 +15,40 @@
 
         <referenceContainer name="title" remove="true"></referenceContainer>
 
-        <move element="post-header" destination="post-description" before="post-text-hld" />
+        <!-- BLOCK__NEWSLETER -->
+
+        <referenceContainer name="content.bottom">
+            <container name="section.newsletter" htmlTag="div" htmlClass="section section__newsletter">
+                <container name="container.newsletter" htmlTag="div" htmlClass="row-full-width-inner">
+                    <container name="wraper.newsletter" htmlTag="div" htmlClass="newsletter__wraper">
+                        <block class="Magento\Cms\Block\Block" name="custom-footer" before="-">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">newsletter.title-block</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                </container>
+            </container>
+        </referenceContainer>
+
+        <move element="form.subscribe" destination="wraper.newsletter" after="-" />
+
+
+        <!-- FOTTER -->
+
+        <referenceBlock name="footer_links" remove="true"></referenceBlock>
+        <referenceBlock name="copyright" remove="true"></referenceBlock>
+
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer-custom" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-custom</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+
+
 
     </body>
 </page>
