@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <!--header-->
+        <!--HEADER-->
+
         <referenceContainer name="header.panel.wrapper" remove="true"></referenceContainer>
+        <referenceBlock name="advanced-search-link" remove="true"></referenceBlock>
+
+        <move element="navigation.sections" destination="header.sub-wrapper" before="-"/>
+
 
         <referenceBlock name="logo">
             <arguments>
@@ -13,7 +18,17 @@
             </arguments>
         </referenceBlock>
 
-        <referenceContainer name="title" remove="true"></referenceContainer>
+        <referenceContainer name="header-wrapper">
+            <container name="header.sub-wrapper" htmlTag="div" htmlClass="header__sub-wrapper" after="logo">
+                <container name="header.user" htmlTag="ul" htmlClass="header__user" after="navigation.sections" />
+            </container>
+        </referenceContainer>
+
+        <move element="authorization-link" destination="header.user" before="-"/>
+        <move element="wish-list-link" destination="header.user" after="authorization-link"/>
+        <move element="minicart" destination="header.user" before="top.search"/>
+        <move element="top.search" destination="header.user" after="-"/>
+
 
         <!-- BLOCK__NEWSLETER -->
 
