@@ -3,8 +3,8 @@
     <body>
         <!--HEADER-->
 
-        <referenceContainer name="header.panel.wrapper" remove="true"></referenceContainer>
-        <referenceBlock name="advanced-search-link" remove="true"></referenceBlock>
+        <referenceContainer name="header.panel.wrapper" remove="true"/>
+        <referenceBlock name="advanced-search-link" remove="true"/>
 
         <move element="navigation.sections" destination="header.sub-wrapper" before="-"/>
 
@@ -51,8 +51,8 @@
 
         <!-- FOTTER -->
 
-        <referenceBlock name="footer_links" remove="true"></referenceBlock>
-        <referenceBlock name="copyright" remove="true"></referenceBlock>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
 
         <referenceContainer name="footer">
             <block class="Magento\Cms\Block\Block" name="footer-custom" before="-">
