@@ -62,7 +62,7 @@
             </block>
         </referenceContainer>
 
-        <move element="promotion-block" destination="sidebar.main" after="-"/>
+
 
 
 

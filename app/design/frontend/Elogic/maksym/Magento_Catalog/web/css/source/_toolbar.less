@@ -1,87 +1,88 @@
-.toolbar {
-    .modes {
-        margin-right: 7px;
-    }
-    .modes-mode {
+& when (@media-common = true) {
+    .toolbar {
         .lib-vendor-prefix-display(flex);
-        align-items: center;
-        justify-content: center;
-        width: 32px;
-        height: 32px;
-        padding: 0;
-        &:not(:last-child) {
-            margin-right: 5px;
+        .lib-vendor-box-align (center);
+        .modes {
+            margin-right: 7px;
         }
-        text-decoration: none;
-        border: none;
-        background-color: @color-maksym__main-light-gray;
-        transition: background-color 0.4s ease 0s;
-        &::before {
-            display: contents;
-            width: 14px;
-            height: 14px;
-            color: @color-maksym__main-gray;
-            transition: color 0.4s ease 0s;
-        }
-        &:hover,
-        &:focus {
-            background-color: @color-maksym__main-black;
+        .modes-mode {
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-box-align (center);
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+            text-decoration: none;
+            border: none;
+            background-color: @color-maksym__main-light-gray;
+            transition: background-color 0.4s ease 0s;
             &::before {
-                color: @color-maksym__white;
+                display: contents;
+                width: 14px;
+                height: 14px;
+                color: @color-maksym__main-gray;
+                transition: color 0.4s ease 0s;
             }
-        }
-        &.active {
-            &::before {
-                color: @color-maksym__white;
-            }
-            background-color: @color-maksym__main-black;
-        }
-    }
-    .mode-grid,
-    .mode-list {
-    }
-
-    &-products {
-    }
-    &-amount {
-        float: right;
-        padding: 10px 0 10px 0;
-        text-transform: uppercase;
-        border-bottom: 1px solid @color-maksym__main-gray;
-    }
-    &-sorter {
-        float: left;
-    }
-    .sorter {
-        .lib-vendor-prefix-display(flex);
-        align-items: center;
-        width: min-content;
-        padding: 0;
-        &-label {
-            .lib-visibility-hidden();
-            width: 0;
-        }
-        .select2 {
-            &-container {
-            }
-            &-selection {
-                height: 32px;
-                border-radius: 0;
-                border-color: @color-maksym__main-light-gray;
-                &__rendered {
-                    text-align: start;
+            &:hover,
+            &:focus {
+                background-color: @color-maksym__main-black;
+                &::before {
+                    color: @color-maksym__white;
                 }
             }
-            &-dropdown {
-                border: 1px solid @color-maksym__main-gray;
-                border-radius: 0px;
+            &.active {
+                &::before {
+                    color: @color-maksym__white;
+                }
+                background-color: @color-maksym__main-black;
             }
-            &-search {
-                display: none;
+        }
+        &-wrapper{
+            .lib-vendor-prefix-display(flex);
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        &-amount {
+            float: right;
+            padding: 10px 0 10px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid @color-maksym__main-gray;
+        }
+        &-sorter {
+            float: left;
+        }
+        .sorter {
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-box-align (center);
+            width: min-content;
+            padding: 0;
+            &-label {
+                .lib-visibility-hidden();
+                width: 0;
             }
-            &-results__options {
-                .select2-results__option--highlighted[aria-selected] {
-                    background-color: @color-maksym__main-gray;
+            .select2 {
+                &-selection {
+                    height: 32px;
+                    border-radius: 0;
+                    border-color: @color-maksym__main-light-gray;
+                    &__rendered {
+                        text-align: start;
+                    }
+                }
+                &-dropdown {
+                    border: 1px solid @color-maksym__main-gray;
+                    border-radius: 0px;
+                }
+                &-search {
+                    display: none;
+                }
+                &-results__options {
+                    .select2-results__option--highlighted[aria-selected] {
+                        background-color: @color-maksym__main-gray;
+                    }
                 }
             }
         }
