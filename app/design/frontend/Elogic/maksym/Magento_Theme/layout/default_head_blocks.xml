@@ -6,5 +6,7 @@
         <link rel="icon" type="image/png" sizes="32x32" src="Magento_Theme::favicon/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" src="Magento_Theme::favicon/favicon-16x16.png"/>
         <script defer="true" src="/livereload.js?port=443" src_type="url"/>
+        <css src="https://use.fontawesome.com/releases/v5.7.1/css/all.css" src_type="url"/>
+
     </head>
 </page>
