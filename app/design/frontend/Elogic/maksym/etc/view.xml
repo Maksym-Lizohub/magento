@@ -8,7 +8,28 @@
                 <width>300</width>
                 <height>380</height>
             </image>
+            <image id="category_page_grid" type="small_image">
+                <width>640</width>
+                <height>800</height>
+            </image>
+            <image id="category_page_list" type="small_image">
+                <width>307</width>
+                <height>381</height>
+            </image>
+
+
+            <image id="hover_product_list" type="hover">
+                <width>300</width>
+                <height>380</height>
+            </image>
+            <image id="photo-currently-hovered" type="hover">
+                <width>640</width>
+                <height>800</height>
+            </image>
+
+
 
         </images>
+
     </media>
 </view>

@@ -1,18 +1,20 @@
-.promotion-block {
-    &-slider {
-        position: relative;
-    }
-    .slick-list {
-    }
-    .slick-dots {
-        position: absolute;
-        bottom: 0;
-        button {
-            width: 10px;
-            height: 10px;
-            border-radius: 0;
-            border: 2px solid @color-maksym__main-black;
-            &[aria-selected="true"] {
+& when (@media-common = true) {
+    .promotion-block {
+        &-slider {
+            position: relative;
+        }
+        .slick-list {
+        }
+        .slick-dots {
+            position: absolute;
+            bottom: 0;
+            button {
+                width: 10px;
+                height: 10px;
+                border-radius: 0;
+                border: 2px solid @color-maksym__main-black;
+                &[aria-selected="true"] {
+                }
             }
         }
     }

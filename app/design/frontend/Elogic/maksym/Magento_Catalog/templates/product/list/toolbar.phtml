@@ -1,7 +1,8 @@
 <?php
 /**
  * Maksym Lizohub theme
- * add "select2"
+ * add "select2", <div class="toolbar-wrapper">
+ * replace sorter.phtml / amount.phtml
  */
 ?>
 <?php
@@ -23,9 +24,11 @@
     <?php if ($block->isExpanded()): ?>
     <?= $block->fetchView($block->getTemplateFile('Magento_Catalog::product/list/toolbar/viewmode.phtml')) ?>
     <?php endif ?>
-    <?= $block->fetchView($block->getTemplateFile('Magento_Catalog::product/list/toolbar/amount.phtml')) ?>
-    <?php if ($block->isExpanded()): ?>
+    <div class="toolbar-wrapper">
     <?= $block->fetchView($block->getTemplateFile('Magento_Catalog::product/list/toolbar/sorter.phtml')) ?>
+    <?php if ($block->isExpanded()): ?>
+    <?= $block->fetchView($block->getTemplateFile('Magento_Catalog::product/list/toolbar/amount.phtml')) ?>
+    </div>
     <?php endif ?>
     <?php endif ?>
 </div>
