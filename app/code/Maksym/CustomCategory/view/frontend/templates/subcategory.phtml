@@ -1,0 +1,46 @@
+<?php
+
+/**
+ *Add custom sub-category before layered navigation
+ */
+?>
+
+<?php
+/** 
+ * @var Maksym/CustomCategory/ViewModel/Product/SubCategory $viewModel
+ * @var $escaper \Magento\Framework\Escaper 
+ * 
+*/
+
+$viewModel = $block->getData('view_model'); 
+?>
+
+<div class="subcategory" data-mage-init='{
+        "accordion":{
+            "active": "false",
+            "collapsible": true,
+            "openedState": "deactivate",
+            "multipleCollapsible": true
+        }}'>
+    <div class="filter-options-wrapper">
+        <div class="filter-options-title" data-role="title">Category</div>
+        <div class="filter-options-content" data-role="collapsible">
+            <ol class="items" data-role="content">
+                <?php
+                $subcats = $viewModel->getSubcategories();
+                foreach ($subcats as $subcat) {
+                    if ($subcat->getIsActive()) {
+                        $subcat_url = $escaper->escapeUrl($subcat->getUrl());
+                ?>
+                <li class="item">
+                    <a class="sub-category__link" href="<?php echo $subcat_url; ?>">
+                        <p><?php echo $escaper->escapeHtml($subcat->getName()); ?></p>
+                    </a>
+                </li>
+                <?php
+                    }
+                } ?>
+            </ol>
+        </div>
+    </div>
+</div>

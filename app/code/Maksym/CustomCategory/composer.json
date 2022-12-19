@@ -1,0 +1,26 @@
+{
+    "name": "maksym/module-customcategory",
+    "description": "Custom category with subcategory to sidebar before the layered navigation.",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        },
+        {
+            "name": "Maksym Lizohub",
+            "email": "maksym.lizohub@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Maksym\\CustomCategory\\": ""
+        }
+    }
+}
