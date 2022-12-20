@@ -1,8 +1,9 @@
 & when (@media-common =true) {
-    h1 {
-        .lib-visually-hidden();
+    .cms-home {
+        h1 {
+            .lib-visually-hidden();
+        }
     }
-
     .section.section__slider {
         padding-bottom: 30px;
     }
@@ -482,28 +483,28 @@
             .slick-arrow {
                 width: 30px;
                 height: 30px;
-        
+
                 .lib-font-size(12);
                 font-weight: @font-weight__light;
                 text-transform: uppercase;
-        
+
                 &::before {
                     .lib-vendor-prefix-display(none);
                 }
             }
-        
+
             .slick-next {
                 position: absolute;
                 top: 0;
                 right: 0;
-        
+
                 &::before {
                     .lib-vendor-prefix-display(flex);
                     .lib-vendor-box-align(center);
                     content: "|";
                 }
             }
-        
+
             .slick-prev {
                 position: absolute;
                 top: 0;
@@ -511,19 +512,19 @@
                 overflow: hidden;
             }
         }
-        
+
         .product-item-photo {
             width: 100%;
         }
-        
+
         .product-item-name {
             text-align: center;
         }
-        
+
         .price-box {
             text-align: center;
         }
-        
+
         .action.tocart.primary {
             .lib-font-size(14);
             color: @color-maksym__main-black;
@@ -532,27 +533,27 @@
             text-transform: uppercase;
             text-decoration: underline;
         }
-        
+
         .product-item {
             position: relative;
             overflow: hidden;
-        
+
             &:hover,
             &:focus {
                 .actions-primary {
                     left: 82px;
                 }
-        
+
                 .price {
                     right: -90px;
                 }
-        
+
                 .actions-secondary {
                     bottom: 160px;
                 }
             }
         }
-        
+
         .actions-primary {
             position: absolute;
             bottom: -4px;
@@ -560,7 +561,7 @@
             transition-property: left;
             transition-duration: 0.4s;
         }
-        
+
         .price {
             position: absolute;
             bottom: 0px;
@@ -568,7 +569,7 @@
             transition-property: right;
             transition-duration: 0.4s;
         }
-        
+
         .actions-secondary {
             position: absolute;
             bottom: -160px;
