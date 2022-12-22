@@ -12,14 +12,14 @@
 <div class="box-tocart">
     <div class="fieldset">
         <?php if ($block->shouldRenderQuantity()) : ?>
-        <div class="field qty">
+        <div class="field qty" data-mage-init='{"qtyCounter": {}}'>
             <label class="label" for="qty"><span><?= $block->escapeHtml(__('Qty')) ?></span></label>
             <div class="control">
-                <button type="button" id="subs"></button>
+                <button type="button" id="subs" class="subs"></button>
                 <input type="number" name="qty" id="qty" min="0" value="<?= $block->getProductDefaultQty() * 1 ?>"
                     title="<?= $block->escapeHtmlAttr(__('Qty')) ?>" class="input-text qty"
                     data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>" />
-                <button type="button" id="adds"></button>
+                <button type="button" id="adds" class="adds"></button>
             </div>
         </div>
         <?php endif; ?>
@@ -37,14 +37,6 @@
     {
         "#product_addtocart_form": {
             "Magento_Catalog/js/validate-product": {}
-        }
-    }
-</script>
-
-<script type="text/x-magento-init">
-    {
-        "*": {
-            "qtyCounter": {}
         }
     }
 </script>
