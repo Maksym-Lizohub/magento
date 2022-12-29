@@ -5,6 +5,7 @@
         .modes {
             margin-right: 7px;
         }
+
         .modes-mode {
             .lib-vendor-prefix-display(flex);
             .lib-vendor-box-align (center);
@@ -15,6 +16,7 @@
             &:not(:last-child) {
                 margin-right: 5px;
             }
+
             text-decoration: none;
             border: none;
             background-color: @color-maksym__main-light-gray;
@@ -26,11 +28,13 @@
                 color: @color-maksym__main-gray;
                 transition: color 0.4s ease 0s;
             }
-            &:hover,
-            &:focus {
-                background-color: @color-maksym__main-black;
-                &::before {
-                    color: @color-maksym__white;
+            &:not(.active) {
+                &:hover,
+                &:focus {
+                    background-color: @color-maksym__main-black;
+                    &::before {
+                        color: @color-maksym__white;
+                    }
                 }
             }
             &.active {
@@ -40,7 +44,7 @@
                 background-color: @color-maksym__main-black;
             }
         }
-        &-wrapper{
+        &-wrapper {
             .lib-vendor-prefix-display(flex);
             justify-content: space-between;
             flex-grow: 1;

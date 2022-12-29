@@ -27,6 +27,15 @@
                 <height>800</height>
             </image>
 
+            <image id="related_products_list" type="small_image">
+                <width>308</width>
+                <height>382</height>
+            </image>
+            <image id="upsell_products_list" type="small_image">
+                <width>308</width>
+                <height>382</height>
+            </image>
+
 
 
         </images>
