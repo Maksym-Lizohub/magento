@@ -9,6 +9,8 @@
     <body>
 
         <move element="page.main.title" destination="product.info.main" before="-" />
+        <move element="product.info.social" destination="product.info.form.content" after="-" />
+
 
 
     </body>
